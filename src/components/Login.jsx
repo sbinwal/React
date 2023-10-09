@@ -40,15 +40,15 @@ const Login = () => {
           updateProfile(auth.currentUser, {
             displayName: name.current.value, photoURL: "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg"
           }).then(() => {
-            const {uid, email,displayName, photoURL} = auth?.currentUser;
-    dispatch(addUser({ uid:uid, email : email , displayName : displayName, photoURL : photoURL }))
+            const { uid, email, displayName, photoURL } = auth?.currentUser;
+            dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
             // Profile updated!
             // ...
           }).catch((error) => {
             // An error occurred
             // ...
           });
-          navigate("/browse")
+          
           // ...
         })
         .catch((error) => {
@@ -68,7 +68,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          navigate("/browse")
+          
           // ...
         })
         .catch((error) => {
