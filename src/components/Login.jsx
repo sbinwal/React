@@ -6,6 +6,7 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVATAR } from '../constants/constants';
 
 const Login = () => {
 
@@ -38,7 +39,7 @@ const Login = () => {
           const user = userCredential.user;
           console.log("user", user)
           updateProfile(auth.currentUser, {
-            displayName: name.current.value, photoURL: "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg"
+            displayName: name.current.value, photoURL: USER_AVATAR
           }).then(() => {
             const { uid, email, displayName, photoURL } = auth?.currentUser;
             dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
