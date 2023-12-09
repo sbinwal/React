@@ -1,11 +1,17 @@
 import React from 'react'
+import { imgURL } from '../constants/constants'
 
-const Movie = ({Image_URL}) => {
+const Movie = ({PosterPath}) => {
+
+  if(!PosterPath)
+  {
+      return null
+  }
   return (
     <div>
      
     <div className='w-40'>
-        <img src={Image_URL} alt="movie"/>
+        <img src={imgURL + PosterPath} alt="movie" className='h-[200px] w-[150px] rounded-lg'/>
     </div>
     </div>
   )

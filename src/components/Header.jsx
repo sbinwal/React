@@ -5,8 +5,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGES } from '../constants/constants';
-import { toggleButton } from '../utils/gptSlice';
+import { gptSuggestions, toggleButton } from '../utils/gptSlice';
 import { changeLanguage } from '../utils/configSlice';
+import { searchButton } from '../utils/searchSlice';
 
 
 const Header = () => {
@@ -53,6 +54,8 @@ const Header = () => {
 
   const handleClick = () =>{
     dispatch(toggleButton())
+    dispatch(searchButton(false))
+    dispatch(gptSuggestions(null))
   }
 
   const handleChange = (e)=>{
@@ -64,11 +67,11 @@ const Header = () => {
   };
   return (
     
-    <div className='z-10 absolute grid grid-cols-12 w-screen items-center shadow-black'>
-        <img src={LOGO} width = {230} height={95} className={gptValue?.button ? "opacity-100 col-span-7" : "opacity-100 col-span-8"} alt='logo'/>
+    <div className='z-10 absolute grid grid-cols-2 w-full pe-12 items-center shadow-black'>
+        <img src={LOGO} width = {230} height={95} className={gptValue?.button ? "opacity-100" : "opacity-100"} alt='logo'/>
     
     {user &&
-    <div className={gptValue?.button ? "flex justify-self-start col-span-5 items-center" : "flex justify-self-start col-span-4 items-center"}>
+    <div className={gptValue?.button ? "flex justify-self-end items-center" : "flex justify-self-end items-center"}>
       <div>
         <p className='text-white mx-2'>{`Welcome, ${user?.displayName}`}</p>
       </div>
@@ -105,14 +108,14 @@ const Header = () => {
               className='cursor-pointer'
             />
             {showSignOutDropdown && (
-              <form className='absolute top-[2.59rem] right-[-2.5rem]'>
-                <button id="signOut" onClick={handleSignOut} className='p-1 bg-indigo-500 text-white w-[5rem] border border-b-black'>
+              <form className='absolute'>
+                <button id="signOut" onClick={handleSignOut} className='p-1 bg-white  w-[5rem] border border-b-black'>
                  Profile
                 </button>
-                <button id="signOut" onClick={handleSignOut} className='p-1 bg-indigo-500 text-white w-[5rem] border border-b-black'>
+                <button id="signOut" onClick={handleSignOut} className='p-1 bg-white  w-[5rem] border border-b-black'>
                  Setting
                 </button>
-                <button id="signOut" onClick={handleSignOut} className='p-1 bg-indigo-500 text-white w-[5rem] border border-b-black'>
+                <button id="signOut" onClick={handleSignOut} className='p-1 bg-white rounded-b-md w-[5rem] border border-b-black'>
                  Sign Out
                 </button>
               </form>

@@ -8,7 +8,7 @@ export const API_Options = {
     }
   };
 
-  export const Image_URL = "https://image.tmdb.org/t/p/w500/"
+  export const imgURL = "https://image.tmdb.org/t/p/w500/"
 
   export const SUPPORTED_LANGUAGES = [
     {identifier : "en", name : "English"},
@@ -16,4 +16,4 @@ export const API_Options = {
     {identifier : "spanish", name : "Spanish"},
   ]
 
-  export const OPEN_API_KEY = "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"
+  export const OPEN_API_KEY = "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"

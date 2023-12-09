@@ -10,8 +10,8 @@ const VideoTitle = ({title,overview}) => {
      
       <h1 className='text-4xl font-bold'>{title}</h1>
       <p className='my-4 text-sm w-1/4'>{overview}</p>
-      <button className='border px-8 py-1 me-6 bg-slate-500 hover:bg-slate-600'><PlayArrowIcon/>Play</button>
-      <button className='border px-4 py-1 bg-slate-500 hover:bg-slate-600'><InfoOutlinedIcon/>More Info</button>
+      <button className='border px-8 py-1 me-6 bg-slate-500 hover:bg-slate-600 rounded-lg'><PlayArrowIcon/>Play</button>
+      <button className='border px-4 py-1 bg-slate-500 hover:bg-slate-600 rounded-lg'><InfoOutlinedIcon/>More Info</button>
      
     </div>
   

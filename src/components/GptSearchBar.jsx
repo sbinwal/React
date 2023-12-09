@@ -4,6 +4,8 @@ import { language } from '../utils/languageConstant'
 import { openai } from '../utils/openAI'
 import { API_Options } from '../constants/constants'
 import { gptSuggestions } from '../utils/gptSlice'
+import { searchButton } from '../utils/searchSlice'
+
 
 
 const GptSearchBar = () => {
@@ -25,6 +27,8 @@ const GptSearchBar = () => {
     const handleGPTSearch = ()=>{
 
       console.log(searchText?.current?.value)
+
+      dispatch(searchButton(true))
 
       const gpt_query = "Act as a movie recommendation system and suggest 5 movies for my query : " + searchText?.current?.value + "and give me only name of 5 movies which are comma separated like the example result given ahead. Example results: Gadar, Don, Golmaal, Sholay, tere naam."
 
@@ -61,7 +65,7 @@ const GptSearchBar = () => {
         placeholder={language[langKey]?.placeHolder}
         className='col-span-9 m-2 py-3 px-2 rounded'
       />
-      <button className='my-2 col-span-3 bg-red-600 rounded' onClick={()=>{handleGPTSearch()}}>{language[langKey]?.search}</button>
+      <button className='my-2 col-span-3 bg-red-600 rounded me-2' onClick={()=>{handleGPTSearch()}}>{language[langKey]?.search}</button>
      
         </form>
     </div>

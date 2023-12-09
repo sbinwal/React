@@ -12,9 +12,16 @@ const gptSlice = createSlice({
               state.button = !state.button
         },
         gptSuggestions : (state,action)=>{
+            if(action?.payload === null)
+            {
+                state.movies = null
+                state.moviesResults = null
+            }
+            else{
             const {movies,moviesResults} = action.payload
             state.movies = movies
             state.moviesResults = moviesResults
+            }
       }
 
     }

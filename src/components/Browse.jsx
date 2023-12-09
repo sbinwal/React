@@ -5,6 +5,8 @@ import GptSearch from './GptSearch';
 import Header from './Header'
 import MainContainer from './MainContainer';
 import SecondryContainer from './SecondryContainer';
+import useTrendingVideos from '../CustomHooks/useTrendingVideo';
+import useUpcomingVideo from '../CustomHooks/useUpcomingVideo';
 
 
 const Browse = () => {
@@ -12,6 +14,8 @@ const Browse = () => {
   const gptValue = useSelector(store => store.gpt)
   useNowPlayingVideos();
   usePopularVideos();
+  useTrendingVideos();
+  useUpcomingVideo();
   return (
     <div>
     <Header/>
