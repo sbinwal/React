@@ -90,10 +90,10 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className='relative'>
+      <div className='absoute'>
         <img src="https://assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/b5953637-091d-4e02-9754-2bfadc8a8f7c/IN-en-20230925-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt='background' className='h-[50rem]' />
-        <div className='bg-shadeblack absolute inset-x-1/3 top-28  w-[30rem] opacity-90 min-h-[660px] py-16'>
+        <div className='bg-shadeblack absolute inset-x-1/3 top-28  w-[30rem] opacity-90 min-h-[600px] py-16 rounded-xl'>
           <div className='mx-auto w-80'>
             <div className='text-4xl font-bold'>
               <h1 className='text-white'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
@@ -125,7 +125,7 @@ const Login = () => {
                     <div className='text-[#b3b3b3]'>Need Help?</div>
                   </div>
                 }
-                <div className='my-16'>
+                <div className='my-8'>
                   <div className='flex my-3'>
                     <h3 className='text-lightblack'>{isSignInForm ? "New to Netflix" : "Already a Member"}</h3>
                     <h3 className='text-white mx-1 cursor-pointer' onClick={toggleForm}>{isSignInForm ? "Sign Up Now" : "Sign In Now"}</h3>
