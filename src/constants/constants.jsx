@@ -16,4 +16,4 @@ export const API_Options = {
     {identifier : "spanish", name : "Spanish"},
   ]
 
-  export const OPEN_API_KEY = "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"
+  export const OPEN_API_KEY = "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"

@@ -90,30 +90,30 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className='absoute'>
+      <div className='relative'>
         <img src="https://assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/b5953637-091d-4e02-9754-2bfadc8a8f7c/IN-en-20230925-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt='background' className='h-[50rem]' />
-        <div className='bg-shadeblack absolute inset-x-1/3 top-28  w-[30rem] opacity-90 min-h-[600px] py-16 rounded-xl'>
-          <div className='mx-auto w-80'>
+          alt='background' className='sm:h-screen xl:h-[50rem]' />
+        <div className='bg-shadeblack absolute xl:inset-x-1/3 sm:px-5 xl:px-0 top-28 opacity-90 sm:py-6 xl:py-16 rounded-xl sm:mx-7'>
+          <div className='xl:mx-5 sm:mx-0'>
             <div className='text-4xl font-bold'>
-              <h1 className='text-white'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+              <h1 className='text-white sm:text-3xl xl:text-4xl'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
             </div>
             <div className=''>
               <form className='mt-8' onSubmit={handleSubmit}>
                 {!isSignInForm &&
                   <div>
-                    <input type="text" ref={name} placeholder='Name' className='w-80 h-14 rounded-md px-5' />
+                    <input type="text" ref={name} placeholder='Name' className='rounded-md xl:px-5 sm:px-3 w-full sm:py-2 xl:py-4' />
                   </div>
                 }
                 <div className='my-6'>
-                  <input type="text" ref={email} placeholder='Email or phone number' className='w-80 h-14 rounded-md px-5' />
+                  <input type="text" ref={email} placeholder='Email or phone number' className='rounded-md px-5 w-full xl:py-4 sm:py-2' />
                 </div>
                 <div>
-                  <input type="text" ref={password} placeholder='Password' className='w-80 h-14 rounded-md px-5' />
+                  <input type="text" ref={password} placeholder='Password' className='rounded-md px-5 w-full xl:py-4 sm:py-2' />
                 </div>
                 <p className='text-red-600'>{error}</p>
                 <div className='mt-6'>
-                  <button className='bg-red-500 w-80 h-14 text-white text-xl font-semibold rounded-md' type="submit">{isSignInForm ? "Sign In" : "Sign Up"}</button>
+                  <button className='bg-red-500 w-full text-white text-xl font-semibold rounded-md xl:py-3 sm:py-2' type="submit">{isSignInForm ? "Sign In" : "Sign Up"}</button>
                 </div>
 
                 {isSignInForm &&

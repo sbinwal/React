@@ -10,10 +10,24 @@ module.exports = {
       },
       position:{
         'leftposition' : '27rem'
-      }
+      },
+      screens: {
+        'sm': '360px',
+        // => @media (min-width: 360px) { ... }
+  
+        'md': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [
     require('tailwind-scrollbar-hide')
   ],
+  defaultScreen: 'xl'
 };
