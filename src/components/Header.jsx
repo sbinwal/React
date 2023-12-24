@@ -91,7 +91,7 @@ const Header = () => {
 }
 
 
-      <button className='text-white mx-5 bg-indigo-500 md:p-2 sm:p-1 sm:text-sm md:text-lg rounded' onClick={handleClick}>{gptValue?.button ? "Homepage" : "GPT Search"}</button>
+      <button className='text-white mx-5 bg-indigo-500 xl:p-2 sm:p-1 sm:text-sm  rounded' onClick={handleClick}>{gptValue?.button ? "Homepage" : "GPT Search"}</button>
       {/* <div>
       <img src= {user?.photoURL} width={40} height={40}  alt = "profile"/>
       </div>
@@ -105,7 +105,7 @@ const Header = () => {
               height={40}
               alt='profile'
               onClick={toggleSignOutDropdown}
-              className='cursor-pointer sm:w-[20px] sm:h-[20px] md:h-[40px] md-w-[40px]'
+              className='cursor-pointer sm:w-[32px] sm:h-[30px] xl:h-[33px]'
             />
             {showSignOutDropdown && (
               <form className='absolute'>
