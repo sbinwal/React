@@ -19,6 +19,7 @@ const VideoBackground = ({ movieId }) => {
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        
       ></iframe>
 
     </div>

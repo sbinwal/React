@@ -13,7 +13,7 @@ const MainContainer = () => {
     console.log("id",id)
 
   return (
-    <div className='relative  bg-gradient-to-r from-black aspect-video w-screen'>
+    <div className='relative bg-gradient-to-r from-black aspect-video w-screen'>
         <VideoBackground movieId = {id}/>
         <VideoTitle title = {original_title} overview = {overview}/>
     </div>

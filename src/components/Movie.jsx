@@ -11,7 +11,7 @@ const Movie = ({PosterPath}) => {
     <div>
      
     <div className='w-40'>
-        <img src={imgURL + PosterPath} alt="movie" className='h-[200px] w-[150px] rounded-lg'/>
+        <img src={imgURL + PosterPath} alt="movie" className='h-[200px] lg:w-[180px] sm:w-[200px] rounded-lg'/>
     </div>
     </div>
   )

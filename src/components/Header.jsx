@@ -68,12 +68,12 @@ const Header = () => {
   return (
     
     <div className='z-10 absolute grid grid-cols-2 w-full pe-12 items-center shadow-black'>
-        <img src={LOGO} width = {230} height={95} className={gptValue?.button ? "opacity-100" : "opacity-100"} alt='logo'/>
+        <img src={LOGO} width = {230} height={95} className={"opacity-100 sm:w-[150px] sm:h-[50px] md:w-[230px] md:h-[95px]"} alt='logo'/>
     
     {user &&
-    <div className={gptValue?.button ? "flex justify-self-end items-center" : "flex justify-self-end items-center"}>
+    <div className={"flex justify-self-end items-center"}>
       <div>
-        <p className='text-white mx-2'>{`Welcome, ${user?.displayName}`}</p>
+        <p className='text-white mx-2 sm:text-sm sm:hidden md:block'>{`Welcome, ${user?.displayName}`}</p>
       </div>
       {gptValue?.button &&
       <form>
@@ -91,7 +91,7 @@ const Header = () => {
 }
 
 
-      <button className='text-white mx-5 bg-indigo-500 p-2 rounded' onClick={handleClick}>{gptValue?.button ? "Homepage" : "GPT Search"}</button>
+      <button className='text-white mx-5 bg-indigo-500 md:p-2 sm:p-1 sm:text-sm md:text-lg rounded' onClick={handleClick}>{gptValue?.button ? "Homepage" : "GPT Search"}</button>
       {/* <div>
       <img src= {user?.photoURL} width={40} height={40}  alt = "profile"/>
       </div>
@@ -105,7 +105,7 @@ const Header = () => {
               height={40}
               alt='profile'
               onClick={toggleSignOutDropdown}
-              className='cursor-pointer'
+              className='cursor-pointer sm:w-[20px] sm:h-[20px] md:h-[40px] md-w-[40px]'
             />
             {showSignOutDropdown && (
               <form className='absolute'>
