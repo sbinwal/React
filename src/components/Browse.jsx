@@ -7,6 +7,7 @@ import MainContainer from './MainContainer';
 import SecondryContainer from './SecondryContainer';
 import useTrendingVideos from '../CustomHooks/useTrendingVideo';
 import useUpcomingVideo from '../CustomHooks/useUpcomingVideo';
+import Play from './Play';
 
 
 const Browse = () => {
@@ -19,7 +20,12 @@ const Browse = () => {
   return (
     <div>
     <Header/>
-    {gptValue?.button ?
+    {
+    gptValue.movie_id
+    ?
+    <Play/>
+    : 
+    gptValue?.button ?
     <GptSearch/>
     :
     <>

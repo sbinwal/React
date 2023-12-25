@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGES } from '../constants/constants';
-import { gptSuggestions, toggleButton } from '../utils/gptSlice';
+import { gptSuggestions, movieId, toggleButton } from '../utils/gptSlice';
 import { changeLanguage } from '../utils/configSlice';
 import { searchButton } from '../utils/searchSlice';
 
@@ -56,6 +56,7 @@ const Header = () => {
     dispatch(toggleButton())
     dispatch(searchButton(false))
     dispatch(gptSuggestions(null))
+    dispatch(movieId(null))
   }
 
   const handleChange = (e)=>{
@@ -68,8 +69,9 @@ const Header = () => {
   return (
     
     <div className='z-10 absolute grid grid-cols-2 w-full pe-12 items-center shadow-black'>
-        <img src={LOGO} width = {230} height={95} className={"opacity-100 sm:w-[150px] sm:h-[50px] md:w-[230px] md:h-[95px]"} alt='logo'/>
-    
+      <div onClick={()=> window.location.reload()}>
+       <img src={LOGO} width = {230} height={95} className={"opacity-100 sm:w-[150px] sm:h-[50px] md:w-[230px] md:h-[95px] hover:cursor-pointer"} alt='logo'/>
+       </div>
     {user &&
     <div className={"flex justify-self-end items-center"}>
       <div>

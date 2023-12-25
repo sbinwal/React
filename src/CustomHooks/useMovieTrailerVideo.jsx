@@ -17,7 +17,7 @@ const useMovieTrailerVideo = (movieId) => {
 
     console.log("sgdcgsd", movieVideo)
 
-    console.log("data", json)
+    console.log("sssssssssss", trailer)
   }
   useEffect(() => {
 

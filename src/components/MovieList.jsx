@@ -12,7 +12,7 @@ const MovieList = ({movies,title}) => {
         {movies?.map((item,index)=>{
             return(
               <div>
-                <Movie PosterPath = {item?.poster_path}/> 
+                <Movie PosterPath = {item?.poster_path} id = {item?.id}/> 
                 </div>  
             )
         })}

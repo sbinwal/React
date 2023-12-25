@@ -3,6 +3,7 @@ import Browse from "./Browse";
 import Login from "./Login";
 import { RouterProvider } from "react-router-dom";
 import GptSearch from "./GptSearch";
+import Play from "./Play";
 
 
 const Body = () => {
@@ -16,6 +17,10 @@ const Body = () => {
       path: "/browse",
       element: <Browse />,
     },
+    {
+      path:"/play",
+      element:<Play/>
+    }
     // {
     //   path: "/gpt",
     //   element: <GptSearch />,

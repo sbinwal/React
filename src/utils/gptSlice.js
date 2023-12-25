@@ -5,7 +5,8 @@ const gptSlice = createSlice({
     initialState : {
         "button" : false,
         "movies" : null,
-        "moviesResults" : null
+        "moviesResults" : null,
+        "movie_id" : null
     },
     reducers : {
         toggleButton : (state,action)=>{
@@ -22,10 +23,14 @@ const gptSlice = createSlice({
             state.movies = movies
             state.moviesResults = moviesResults
             }
+      },
+      movieId : (state,action)=>{
+        console.log("ssdsad",action.payload)
+          state.movie_id = action.payload
       }
 
     }
 })
 
-export const { toggleButton, gptSuggestions } = gptSlice.actions;
+export const { toggleButton, gptSuggestions,movieId } = gptSlice.actions;
 export default gptSlice.reducer
