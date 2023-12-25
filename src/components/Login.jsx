@@ -106,10 +106,10 @@ const Login = () => {
                   </div>
                 }
                 <div className='my-6'>
-                  <input type="text" ref={email} placeholder='Email or phone number' className='rounded-md px-5 w-full md:py-4 sm:py-2' />
+                  <input type="text" ref={email} placeholder='Email' className='rounded-md px-5 w-full md:py-4 sm:py-2' />
                 </div>
                 <div>
-                  <input type="text" ref={password} placeholder='Password' className='rounded-md px-5 w-full md:py-4 sm:py-2' />
+                  <input type="password" ref={password} placeholder='Password' className='rounded-md px-5 w-full md:py-4 sm:py-2' />
                 </div>
                 <p className='text-red-600'>{error}</p>
                 <div className='mt-6'>
