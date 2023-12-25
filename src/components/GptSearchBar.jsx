@@ -49,7 +49,7 @@ const GptSearchBar = () => {
         console.log("tmdb",tmdbResults)
         dispatch(gptSuggestions({"movies" : gptResultsArray, "moviesResults" : tmdbResults}))
       }
-      main();
+      main(); 
 
       //Now for each result make an API call
 
@@ -57,7 +57,7 @@ const GptSearchBar = () => {
     }
   return (
     <div className='pt-[10rem] container mx-auto flex justify-center'>
-        <form className='bg-black w-1/2 grid grid-cols-12 rounded' onSubmit={(e)=>e.preventDefault()}>
+        <form className='bg-black xl:w-[34rem] sm:w-[21rem] md:w-[28rem] grid grid-cols-12 rounded' onSubmit={(e)=>e.preventDefault()}>
            
         <input
         type="text"

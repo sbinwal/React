@@ -73,15 +73,15 @@ const Header = () => {
     {user &&
     <div className={"flex justify-self-end items-center"}>
       <div>
-        <p className='text-white mx-2 sm:text-sm sm:hidden md:block'>{`Welcome, ${user?.displayName}`}</p>
+        <p className='text-white mx-2 sm:text-sm sm:hidden md:block py-1 px-[2px]'>{`Welcome, ${user?.displayName}`}</p>
       </div>
       {gptValue?.button &&
       <form>
-      <select id="mySelect"  onChange={handleChange} className='p-2 rounded bg-indigo-500 text-white'>
+      <select id="mySelect"  onChange={handleChange} className='md:px-1 md:py-[2px] sm:p-0 rounded border-2 border-white xl:p-[3px] bg-indigo-500 text-white'>
         {SUPPORTED_LANGUAGES?.map((item,index)=>{
 
           return(
-           <option value={item?.identifier}>{item?.name}</option>
+           <option value={item?.identifier} className='w-6'>{item?.name}</option>
           )
            
         })}
@@ -91,7 +91,7 @@ const Header = () => {
 }
 
 
-      <button className='text-white mx-5 bg-indigo-500 xl:p-2 sm:p-1 sm:text-sm  rounded' onClick={handleClick}>{gptValue?.button ? "Homepage" : "GPT Search"}</button>
+      <button className='text-white md:mx-5 sm:mx-[10px] border-2 border-white xl:p-1 bg-indigo-500 sm:p-1 sm:text-sm  rounded' onClick={handleClick}>{gptValue?.button ? "Home" : "GPT Search"}</button>
       {/* <div>
       <img src= {user?.photoURL} width={40} height={40}  alt = "profile"/>
       </div>
@@ -105,7 +105,7 @@ const Header = () => {
               height={40}
               alt='profile'
               onClick={toggleSignOutDropdown}
-              className='cursor-pointer sm:w-[32px] sm:h-[30px] xl:h-[33px]'
+              className='cursor-pointer sm:w-[32px] sm:h-[26px] md:w-[40px] xl:h-[33px]'
             />
             {showSignOutDropdown && (
               <form className='absolute'>
