@@ -8,6 +8,7 @@ import SecondryContainer from './SecondryContainer';
 import useTrendingVideos from '../CustomHooks/useTrendingVideo';
 import useUpcomingVideo from '../CustomHooks/useUpcomingVideo';
 import Play from './Play';
+import Footer from './Footer';
 
 
 const Browse = () => {
@@ -32,6 +33,13 @@ const Browse = () => {
     <MainContainer/>
     <SecondryContainer/>
     </>
+}
+{gptValue?.button ?
+<div className='sm:sticky sm:bottom-0 sm:left-0 sm:right-0'>
+<Footer/>
+</div>
+:
+<Footer/>
 }
     </div>
   )

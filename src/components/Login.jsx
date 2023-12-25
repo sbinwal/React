@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { USER_AVATAR } from '../constants/constants';
+import Footer from './Footer';
 
 const Login = () => {
 
@@ -143,6 +144,8 @@ const Login = () => {
 
         </div>
       </div>
+
+      <Footer/>
 
 
     </div>

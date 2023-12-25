@@ -68,7 +68,7 @@ const Header = () => {
   };
   return (
     
-    <div className='z-10 absolute grid grid-cols-2 w-full pe-12 items-center shadow-black'>
+    <div className='z-10 absolute grid grid-cols-2 w-full pe-12 items-center shadow-black '>
       <div onClick={()=> window.location.reload()}>
        <img src={LOGO} width = {230} height={95} className={"opacity-100 sm:w-[150px] sm:h-[50px] md:w-[230px] md:h-[95px] hover:cursor-pointer"} alt='logo'/>
        </div>
